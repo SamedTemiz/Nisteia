@@ -10,6 +10,9 @@ build/
 # Claude Code local state (launch.json IS committed — useful dev config)
 .claude/scheduled_tasks.lock
 
+# Detached-build log (tool/build_apk.bat)
+apk_build.log
+
 # Generated localization
 lib/l10n/generated/
 
