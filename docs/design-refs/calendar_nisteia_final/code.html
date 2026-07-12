@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nisteia - Calendar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Geist:wght@400;500;600&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#2f3132",
+                        "inverse-on-surface": "#313031",
+                        "secondary-container": "#474649",
+                        "on-secondary": "#303032",
+                        "inverse-primary": "#735c00",
+                        "surface": "#131314",
+                        "surface-container-low": "#1c1b1c",
+                        "error-container": "#93000a",
+                        "on-background": "#e5e2e3",
+                        "on-surface-variant": "#d0c5af",
+                        "secondary": "#c8c6c8",
+                        "outline": "#99907c",
+                        "secondary-fixed": "#e4e2e4",
+                        "surface-bright": "#39393a",
+                        "on-error": "#690005",
+                        "surface-container-highest": "#353436",
+                        "primary-container": "#d4af37",
+                        "surface-dim": "#131314",
+                        "tertiary-fixed": "#e2e2e4",
+                        "primary-fixed": "#ffe088",
+                        "on-error-container": "#ffdad6",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed-variant": "#574500",
+                        "tertiary-fixed-dim": "#c6c6c8",
+                        "on-secondary-fixed": "#1b1b1d",
+                        "surface-tint": "#e9c349",
+                        "background": "#131314",
+                        "on-tertiary-container": "#444547",
+                        "inverse-surface": "#e5e2e3",
+                        "on-secondary-container": "#b7b4b7",
+                        "on-tertiary-fixed-variant": "#454749",
+                        "on-surface": "#e5e2e3",
+                        "secondary-fixed-dim": "#c8c6c8",
+                        "on-primary": "#3c2f00",
+                        "on-secondary-fixed-variant": "#474649",
+                        "on-tertiary-fixed": "#1a1c1d",
+                        "surface-variant": "#353436",
+                        "outline-variant": "#4d4635",
+                        "tertiary": "#ceced0",
+                        "on-primary-container": "#554300",
+                        "tertiary-container": "#b2b3b5",
+                        "primary": "#f2ca50",
+                        "on-primary-fixed": "#241a00",
+                        "primary-fixed-dim": "#e9c349",
+                        "surface-container-lowest": "#0e0e0f",
+                        "surface-container": "#201f20",
+                        "surface-container-high": "#2a2a2b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "card-gap": "16px",
+                        "unit": "4px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Hanken Grotesk", "sans-serif"],
+                        "body-lg": ["Geist", "sans-serif"],
+                        "headline-md": ["Libre Caslon Text", "serif"],
+                        "headline-lg-mobile": ["Libre Caslon Text", "serif"],
+                        "label-md": ["Hanken Grotesk", "sans-serif"],
+                        "headline-sm": ["Libre Caslon Text", "serif"],
+                        "headline-lg": ["Libre Caslon Text", "serif"],
+                        "body-md": ["Geist", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["10px", { "lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #0D0D0E; color: #e5e2e3; -webkit-font-smoothing: antialiased; min-height: max(884px, 100dvh); }
+        .glass-panel {
+            background: rgba(26, 26, 28, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-panel-active {
+            background: rgba(26, 26, 28, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid #D4AF37;
+            border-left: 0.5px solid rgba(255, 255, 255, 0.1);
+            border-right: 0.5px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.05);
+        }
+        .nav-scrim { background: linear-gradient(180deg, rgba(13, 13, 14, 0) 0%, rgba(13, 13, 14, 0.85) 60%); }
+        .day-cell { transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+        .day-cell:hover { transform: scale(1.02); z-index: 10; box-shadow: 0 4px 20px rgba(0,0,0,0.4); border: 0.5px solid rgba(212, 175, 55, 0.5); }
+        .bg-strict { background-color: rgba(147, 0, 10, 0.7); }
+        .bg-wineoil { background-color: rgba(233, 195, 73, 0.4); }
+        .bg-fish { background-color: rgba(242, 202, 80, 0.6); }
+        .bg-free { background-color: rgba(28, 27, 28, 0.8); }
+        .bottom-sheet { transform: translateY(100%); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .bottom-sheet.open { transform: translateY(0); }
+    </style>
+  </head>
+<body class="bg-background min-h-screen flex flex-col font-body-md">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-3xl border-b border-white/10 shadow-none">
+<div class="flex items-center justify-between px-margin-mobile h-16 w-full max-w-2xl mx-auto">
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-300 active:scale-95 transition-transform" aria-label="Menu">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm text-primary tracking-tight">Nisteia</h1>
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-300 active:scale-95 transition-transform" aria-label="Profile">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-28 pb-32 px-margin-mobile w-full max-w-2xl mx-auto relative z-10">
+<!-- Ambient Background Glow -->
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden flex items-center justify-center">
+<div class="absolute w-[600px] h-[600px] bg-primary-container/5 rounded-full blur-[100px] top-1/4"></div>
+</div>
+<div class="relative z-10">
+<!-- Month Header -->
+<div class="flex items-center justify-between mb-8 glass-panel rounded-xl p-6">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors rounded-full glass-panel active:scale-95">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<h2 class="font-headline-md text-headline-md text-primary text-center">March</h2>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors rounded-full glass-panel active:scale-95">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<!-- Calendar Grid -->
+<div class="glass-panel-active rounded-xl p-4 mb-8 relative overflow-hidden">
+<!-- Subtle inner glow -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-gradient-to-b from-primary/20 to-transparent"></div>
+<!-- Days of Week -->
+<div class="grid grid-cols-7 gap-2 mb-4 text-center">
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Sun</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Mon</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Tue</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Wed</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Thu</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Fri</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Sat</div>
+</div>
+<!-- Days Grid -->
+<div class="grid grid-cols-7 gap-2">
+<!-- Previous Month Padding -->
+<div class="aspect-square rounded-lg flex items-center justify-center opacity-30 text-sm">25</div>
+<div class="aspect-square rounded-lg flex items-center justify-center opacity-30 text-sm">26</div>
+<div class="aspect-square rounded-lg flex items-center justify-center opacity-30 text-sm">27</div>
+<div class="aspect-square rounded-lg flex items-center justify-center opacity-30 text-sm">28</div>
+<!-- March Days -->
+<div class="day-cell aspect-square rounded-lg bg-strict border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('1', 'Strict Fast', 'Clean Monday. No meat, dairy, fish, wine, or oil.')">
+<span class="font-body-md text-on-surface z-10">1</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-strict border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('2', 'Strict Fast', 'No meat, dairy, fish, wine, or oil.')">
+<span class="font-body-md text-on-surface z-10">2</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-strict border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('3', 'Strict Fast', 'No meat, dairy, fish, wine, or oil.')">
+<span class="font-body-md text-on-surface z-10">3</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-wineoil border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('4', 'Wine &amp; Oil', 'Wine and oil permitted.')">
+<span class="font-body-md text-on-surface z-10">4</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-strict border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('5', 'Strict Fast', 'No meat, dairy, fish, wine, or oil.')">
+<span class="font-body-md text-on-surface z-10">5</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-strict border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('6', 'Strict Fast', 'No meat, dairy, fish, wine, or oil.')">
+<span class="font-body-md text-on-surface z-10">6</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-wineoil border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('7', 'Wine &amp; Oil', 'Wine and oil permitted.')">
+<span class="font-body-md text-on-surface z-10">7</span>
+</div>
+<!-- Row 2 -->
+<div class="day-cell aspect-square rounded-lg bg-wineoil border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('8', 'Wine &amp; Oil', 'Sunday of Orthodoxy.')">
+<span class="font-body-md text-on-surface z-10">8</span>
+<span class="material-symbols-outlined text-[10px] text-primary absolute bottom-1">star</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-strict border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('9', 'Strict Fast', 'No meat, dairy, fish, wine, or oil.')">
+<span class="font-body-md text-on-surface z-10">9</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-strict border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('10', 'Strict Fast', 'No meat, dairy, fish, wine, or oil.')">
+<span class="font-body-md text-on-surface z-10">10</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-strict border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('11', 'Strict Fast', 'No meat, dairy, fish, wine, or oil.')">
+<span class="font-body-md text-on-surface z-10">11</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-strict border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('12', 'Strict Fast', 'No meat, dairy, fish, wine, or oil.')">
+<span class="font-body-md text-on-surface z-10">12</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-strict border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('13', 'Strict Fast', 'No meat, dairy, fish, wine, or oil.')">
+<span class="font-body-md text-on-surface z-10">13</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-wineoil border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('14', 'Wine &amp; Oil', 'Wine and oil permitted.')">
+<span class="font-body-md text-on-surface z-10">14</span>
+</div>
+<!-- Row 3 -->
+<div class="day-cell aspect-square rounded-lg bg-wineoil border border-white/5 flex flex-col items-center justify-center relative cursor-pointer ring-1 ring-primary shadow-[0_0_10px_rgba(242,202,80,0.3)]" onclick="openBottomSheet('15', 'Wine &amp; Oil', 'Sunday of St. Gregory Palamas. (Today)')">
+<span class="font-body-md text-primary font-bold z-10">15</span>
+<span class="material-symbols-outlined text-[10px] text-primary absolute bottom-1">star</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-strict border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('16', 'Strict Fast', 'No meat, dairy, fish, wine, or oil.')">
+<span class="font-body-md text-on-surface z-10">16</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-strict border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('17', 'Strict Fast', 'No meat, dairy, fish, wine, or oil.')">
+<span class="font-body-md text-on-surface z-10">17</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-strict border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('18', 'Strict Fast', 'No meat, dairy, fish, wine, or oil.')">
+<span class="font-body-md text-on-surface z-10">18</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-strict border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('19', 'Strict Fast', 'No meat, dairy, fish, wine, or oil.')">
+<span class="font-body-md text-on-surface z-10">19</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-strict border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('20', 'Strict Fast', 'No meat, dairy, fish, wine, or oil.')">
+<span class="font-body-md text-on-surface z-10">20</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-wineoil border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('21', 'Wine &amp; Oil', 'Wine and oil permitted.')">
+<span class="font-body-md text-on-surface z-10">21</span>
+</div>
+<!-- Row 4 -->
+<div class="day-cell aspect-square rounded-lg bg-wineoil border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('22', 'Wine &amp; Oil', 'Sunday of the Holy Cross.')">
+<span class="font-body-md text-on-surface z-10">22</span>
+<span class="material-symbols-outlined text-[10px] text-primary absolute bottom-1">star</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-strict border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('23', 'Strict Fast', 'No meat, dairy, fish, wine, or oil.')">
+<span class="font-body-md text-on-surface z-10">23</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-strict border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('24', 'Strict Fast', 'No meat, dairy, fish, wine, or oil.')">
+<span class="font-body-md text-on-surface z-10">24</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-fish border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('25', 'Fish Allowed', 'Annunciation of the Theotokos. Fish, wine, and oil permitted.')">
+<span class="font-body-md text-on-surface z-10">25</span>
+<span class="material-symbols-outlined text-[10px] text-primary absolute bottom-1">star</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-strict border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('26', 'Strict Fast', 'No meat, dairy, fish, wine, or oil.')">
+<span class="font-body-md text-on-surface z-10">26</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-strict border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('27', 'Strict Fast', 'No meat, dairy, fish, wine, or oil.')">
+<span class="font-body-md text-on-surface z-10">27</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-wineoil border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('28', 'Wine &amp; Oil', 'Wine and oil permitted.')">
+<span class="font-body-md text-on-surface z-10">28</span>
+</div>
+<!-- Row 5 -->
+<div class="day-cell aspect-square rounded-lg bg-wineoil border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('29', 'Wine &amp; Oil', 'Sunday of St. John Climacus.')">
+<span class="font-body-md text-on-surface z-10">29</span>
+<span class="material-symbols-outlined text-[10px] text-primary absolute bottom-1">star</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-strict border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('30', 'Strict Fast', 'No meat, dairy, fish, wine, or oil.')">
+<span class="font-body-md text-on-surface z-10">30</span>
+</div>
+<div class="day-cell aspect-square rounded-lg bg-strict border border-white/5 flex flex-col items-center justify-center relative cursor-pointer" onclick="openBottomSheet('31', 'Strict Fast', 'No meat, dairy, fish, wine, or oil.')">
+<span class="font-body-md text-on-surface z-10">31</span>
+</div>
+<!-- Next Month Padding -->
+<div class="aspect-square rounded-lg flex items-center justify-center opacity-30 text-sm">1</div>
+<div class="aspect-square rounded-lg flex items-center justify-center opacity-30 text-sm">2</div>
+<div class="aspect-square rounded-lg flex items-center justify-center opacity-30 text-sm">3</div>
+<div class="aspect-square rounded-lg flex items-center justify-center opacity-30 text-sm">4</div>
+</div>
+</div>
+<!-- Legend -->
+<div class="flex flex-wrap justify-center gap-x-4 gap-y-2 glass-panel rounded-2xl py-3 px-4 mb-8">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-strict border border-white/20"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Strict</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-wineoil border border-white/20"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Wine/Oil</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-fish border border-white/20"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Fish</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-free border border-white/20"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Free</span>
+</div>
+<div class="flex items-center gap-1 pl-4 border-l border-white/10">
+<span class="material-symbols-outlined text-[14px] text-primary">star</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Feast</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Sheet overlay -->
+<div class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300" id="sheet-overlay" onclick="closeBottomSheet()"></div>
+<!-- Day Detail Bottom Sheet -->
+<div class="bottom-sheet fixed bottom-0 left-0 right-0 z-[70] bg-surface-container-high/90 backdrop-blur-3xl rounded-t-[32px] border-t border-white/10 p-6 max-h-[70vh] overflow-y-auto w-full shadow-[0_-20px_40px_rgba(0,0,0,0.5)]" id="day-sheet">
+<div class="w-12 h-1.5 bg-white/20 rounded-full mx-auto mb-6"></div>
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-2">March <span id="sheet-date">15</span>, 2024</h3>
+<h2 class="font-headline-sm text-headline-sm text-on-surface" id="sheet-title">Sunday of St. Gregory Palamas</h2>
+</div>
+<button class="p-2 bg-white/5 rounded-full hover:bg-white/10 transition-colors" onclick="closeBottomSheet()">
+<span class="material-symbols-outlined text-on-surface-variant">close</span>
+</button>
+</div>
+<div class="glass-panel rounded-xl p-4 mb-6 flex items-start gap-4 border-l-2 border-primary">
+<span class="material-symbols-outlined text-primary mt-1">restaurant</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-1" id="sheet-fast-type">Wine &amp; Oil</h4>
+<p class="font-body-md text-body-md text-on-surface-variant" id="sheet-fast-desc">Wine and oil permitted. Abstain from meat, dairy, and fish.</p>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest border-b border-white/10 pb-2">Readings</h4>
+<div class="p-3 hover:bg-white/5 rounded-lg transition-colors cursor-pointer group flex justify-between items-center">
+<div>
+<span class="font-body-md text-on-surface block group-hover:text-primary transition-colors">Hebrews 1:10-2:3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Epistle</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary">chevron_right</span>
+</div>
+<div class="p-3 hover:bg-white/5 rounded-lg transition-colors cursor-pointer group flex justify-between items-center">
+<div>
+<span class="font-body-md text-on-surface block group-hover:text-primary transition-colors">Mark 2:1-12</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Gospel</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Scrim for floating nav -->
+<div class="fixed bottom-0 left-0 right-0 h-32 nav-scrim z-40 pointer-events-none"></div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 mb-margin-mobile mx-margin-mobile rounded-full overflow-hidden border border-white/10 shadow-[0_0_20px_rgba(212,175,55,0.05)] backdrop-blur-3xl bg-surface-container/60">
+<div class="flex justify-around items-center h-20 px-4 w-full">
+<a href="../today_nisteia_final/code.html" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary/80 transition-all active:scale-90 duration-200 w-16">
+<span class="material-symbols-outlined mb-1">today</span>
+<span class="font-label-md text-label-md">Today</span>
+</a>
+<a href="#" class="flex flex-col items-center justify-center text-primary drop-shadow-[0_0_8px_rgba(212,175,55,0.4)] active:scale-90 transition-transform duration-200 w-16">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+<span class="font-label-md text-label-md">Calendar</span>
+</a>
+<a href="../food_guide_nisteia_final/code.html" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary/80 transition-all active:scale-90 duration-200 w-16">
+<span class="material-symbols-outlined mb-1">restaurant_menu</span>
+<span class="font-label-md text-label-md">Guide</span>
+</a>
+<a href="../seasons_nisteia_final/code.html" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary/80 transition-all active:scale-90 duration-200 w-16">
+<span class="material-symbols-outlined mb-1">hourglass_empty</span>
+<span class="font-label-md text-label-md">Seasons</span>
+</a>
+</div>
+</nav>
+<script>
+        function openBottomSheet(date, fastType, fastDesc) {
+            document.getElementById('sheet-date').innerText = date;
+            document.getElementById('sheet-fast-type').innerText = fastType;
+            document.getElementById('sheet-fast-desc').innerText = fastDesc;
+
+            let title = "Lenten Weekday";
+            if(date == 8) title = "Sunday of Orthodoxy";
+            if(date == 15) title = "Sunday of St. Gregory Palamas";
+            if(date == 22) title = "Sunday of the Holy Cross";
+            if(date == 25) title = "Annunciation of the Theotokos";
+            if(date == 29) title = "Sunday of St. John Climacus";
+            document.getElementById('sheet-title').innerText = title;
+
+            const overlay = document.getElementById('sheet-overlay');
+            const sheet = document.getElementById('day-sheet');
+
+            overlay.classList.remove('hidden');
+            void overlay.offsetWidth;
+            overlay.classList.remove('opacity-0');
+
+            sheet.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBottomSheet() {
+            const overlay = document.getElementById('sheet-overlay');
+            const sheet = document.getElementById('day-sheet');
+
+            overlay.classList.add('opacity-0');
+            sheet.classList.remove('open');
+
+            setTimeout(() => {
+                overlay.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+    </script>
+</body></html>

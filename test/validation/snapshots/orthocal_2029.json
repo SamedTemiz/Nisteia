@@ -1,0 +1,2192 @@
+{
+  "1-1": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "1-2": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "1-3": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "1-4": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "1-5": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 9,
+    "fast_exception_desc": "Strict Fast"
+  },
+  "1-6": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "1-7": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "1-8": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "1-9": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "1-10": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "1-11": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "1-12": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "1-13": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "1-14": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "1-15": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "1-16": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "1-17": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "1-18": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "1-19": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "1-20": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "1-21": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "1-22": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "1-23": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "1-24": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "1-25": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "1-26": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "1-27": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "1-28": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "1-29": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "1-30": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "1-31": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "2-1": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "2-2": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "2-3": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "2-4": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "2-5": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "2-6": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "2-7": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "2-8": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "2-9": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "2-10": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "2-11": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "2-12": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 7,
+    "fast_exception_desc": "Meat Fast"
+  },
+  "2-13": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 7,
+    "fast_exception_desc": "Meat Fast"
+  },
+  "2-14": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 7,
+    "fast_exception_desc": "Meat Fast"
+  },
+  "2-15": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 7,
+    "fast_exception_desc": "Meat Fast"
+  },
+  "2-16": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 7,
+    "fast_exception_desc": "Meat Fast"
+  },
+  "2-17": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 7,
+    "fast_exception_desc": "Meat Fast"
+  },
+  "2-18": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 7,
+    "fast_exception_desc": "Meat Fast"
+  },
+  "2-19": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 10,
+    "fast_exception_desc": "No overrides"
+  },
+  "2-20": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 10,
+    "fast_exception_desc": "No overrides"
+  },
+  "2-21": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 10,
+    "fast_exception_desc": "No overrides"
+  },
+  "2-22": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 10,
+    "fast_exception_desc": "No overrides"
+  },
+  "2-23": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 10,
+    "fast_exception_desc": "No overrides"
+  },
+  "2-24": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 3,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "2-25": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 3,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "2-26": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "2-27": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "2-28": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "3-1": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "3-2": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "3-3": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 3,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "3-4": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 3,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "3-5": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "3-6": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "3-7": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "3-8": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "3-9": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "3-10": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 3,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "3-11": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 3,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "3-12": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "3-13": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "3-14": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "3-15": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "3-16": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "3-17": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 3,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "3-18": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 3,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "3-19": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "3-20": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "3-21": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 3,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "3-22": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 3,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "3-23": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 3,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "3-24": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 3,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "3-25": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 4,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "3-26": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 3,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "3-27": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "3-28": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "3-29": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "3-30": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "3-31": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 6,
+    "fast_exception_desc": "Wine, Oil and Caviar are Allowed"
+  },
+  "4-1": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 4,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "4-2": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 10,
+    "fast_exception_desc": "No overrides"
+  },
+  "4-3": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 10,
+    "fast_exception_desc": "No overrides"
+  },
+  "4-4": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 10,
+    "fast_exception_desc": "No overrides"
+  },
+  "4-5": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 3,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "4-6": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 9,
+    "fast_exception_desc": "Strict Fast"
+  },
+  "4-7": {
+    "fast_level": 2,
+    "fast_level_desc": "Lenten Fast",
+    "fast_exception": 5,
+    "fast_exception_desc": "Wine is Allowed"
+  },
+  "4-8": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "4-9": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "4-10": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "4-11": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "4-12": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "4-13": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "4-14": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "4-15": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "4-16": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "4-17": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "4-18": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "4-19": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "4-20": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "4-21": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "4-22": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "4-23": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "4-24": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "4-25": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "4-26": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "4-27": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "4-28": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "4-29": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "4-30": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "5-1": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "5-2": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "5-3": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "5-4": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "5-5": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "5-6": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "5-7": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "5-8": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "5-9": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "5-10": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "5-11": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "5-12": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "5-13": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "5-14": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "5-15": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "5-16": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "5-17": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "5-18": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "5-19": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "5-20": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "5-21": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "5-22": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "5-23": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "5-24": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "5-25": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "5-26": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "5-27": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "5-28": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "5-29": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "5-30": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "5-31": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "6-1": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "6-2": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "6-3": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "6-4": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "6-5": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "6-6": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "6-7": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "6-8": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "6-9": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "6-10": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "6-11": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "6-12": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "6-13": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "6-14": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "6-15": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "6-16": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "6-17": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "6-18": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "6-19": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "6-20": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "6-21": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "6-22": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "6-23": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "6-24": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "6-25": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "6-26": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "6-27": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "6-28": {
+    "fast_level": 3,
+    "fast_level_desc": "Apostles Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "6-29": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "6-30": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-1": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-2": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-3": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-4": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-5": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-6": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-7": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-8": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-9": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-10": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-11": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-12": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-13": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-14": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-15": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "7-16": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-17": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-18": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-19": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-20": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "7-21": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-22": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-23": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-24": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-25": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-26": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-27": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-28": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-29": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-30": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "7-31": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "8-1": {
+    "fast_level": 4,
+    "fast_level_desc": "Dormition Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "8-2": {
+    "fast_level": 4,
+    "fast_level_desc": "Dormition Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "8-3": {
+    "fast_level": 4,
+    "fast_level_desc": "Dormition Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "8-4": {
+    "fast_level": 4,
+    "fast_level_desc": "Dormition Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "8-5": {
+    "fast_level": 4,
+    "fast_level_desc": "Dormition Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "8-6": {
+    "fast_level": 4,
+    "fast_level_desc": "Dormition Fast",
+    "fast_exception": 4,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "8-7": {
+    "fast_level": 4,
+    "fast_level_desc": "Dormition Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "8-8": {
+    "fast_level": 4,
+    "fast_level_desc": "Dormition Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "8-9": {
+    "fast_level": 4,
+    "fast_level_desc": "Dormition Fast",
+    "fast_exception": 4,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "8-10": {
+    "fast_level": 4,
+    "fast_level_desc": "Dormition Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "8-11": {
+    "fast_level": 4,
+    "fast_level_desc": "Dormition Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "8-12": {
+    "fast_level": 4,
+    "fast_level_desc": "Dormition Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "8-13": {
+    "fast_level": 4,
+    "fast_level_desc": "Dormition Fast",
+    "fast_exception": 4,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "8-14": {
+    "fast_level": 4,
+    "fast_level_desc": "Dormition Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "8-15": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "8-16": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "8-17": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "8-18": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "8-19": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "8-20": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "8-21": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "8-22": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "8-23": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "8-24": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "8-25": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "8-26": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "8-27": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "8-28": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "8-29": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 8,
+    "fast_exception_desc": "Strict Fast (Wine and Oil)"
+  },
+  "8-30": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "8-31": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "9-1": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "9-2": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "9-3": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "9-4": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "9-5": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "9-6": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "9-7": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "9-8": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "9-9": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "9-10": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "9-11": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "9-12": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "9-13": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "9-14": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 8,
+    "fast_exception_desc": "Strict Fast (Wine and Oil)"
+  },
+  "9-15": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "9-16": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "9-17": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "9-18": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "9-19": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "9-20": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "9-21": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "9-22": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "9-23": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "9-24": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "9-25": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "9-26": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "9-27": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "9-28": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "9-29": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "9-30": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-1": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "10-2": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-3": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-4": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-5": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-6": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "10-7": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-8": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-9": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "10-10": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-11": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-12": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-13": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-14": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-15": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-16": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-17": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-18": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-19": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-20": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-21": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-22": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-23": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-24": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-25": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-26": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "10-27": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-28": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-29": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-30": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "10-31": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "11-1": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "11-2": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "11-3": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "11-4": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "11-5": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "11-6": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "11-7": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "11-8": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "11-9": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "11-10": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "11-11": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "11-12": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "11-13": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "11-14": {
+    "fast_level": 1,
+    "fast_level_desc": "Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "11-15": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "11-16": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "11-17": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "11-18": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "11-19": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "11-20": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "11-21": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "11-22": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "11-23": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "11-24": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "11-25": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "11-26": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "11-27": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "11-28": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "11-29": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "11-30": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "12-1": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "12-2": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "12-3": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "12-4": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "12-5": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "12-6": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "12-7": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "12-8": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "12-9": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "12-10": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "12-11": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "12-12": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "12-13": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "12-14": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "12-15": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "12-16": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 2,
+    "fast_exception_desc": "Fish, Wine and Oil are Allowed"
+  },
+  "12-17": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "12-18": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "12-19": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "12-20": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "12-21": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 0,
+    "fast_exception_desc": ""
+  },
+  "12-22": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "12-23": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 1,
+    "fast_exception_desc": "Wine and Oil are Allowed"
+  },
+  "12-24": {
+    "fast_level": 5,
+    "fast_level_desc": "Nativity Fast",
+    "fast_exception": 9,
+    "fast_exception_desc": "Strict Fast"
+  },
+  "12-25": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "12-26": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "12-27": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "12-28": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "12-29": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "12-30": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  },
+  "12-31": {
+    "fast_level": 0,
+    "fast_level_desc": "No Fast",
+    "fast_exception": 11,
+    "fast_exception_desc": "Fast Free"
+  }
+}

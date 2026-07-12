@@ -1,0 +1,30 @@
+# Dart / Flutter
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+# pubspec.lock is committed on purpose: this is an app, lock = reproducible builds
+.metadata
+
+# Claude Code local state (launch.json IS committed — useful dev config)
+.claude/scheduled_tasks.lock
+
+# Generated localization
+lib/l10n/generated/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets / signing (never commit)
+*.keystore
+*.jks
+ios/Runner/GoogleService-Info.plist
+android/app/google-services.json
+key.properties

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nisteia - Today</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Geist:wght@400;500;600&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#2f3132",
+                        "inverse-on-surface": "#313031",
+                        "secondary-container": "#474649",
+                        "on-secondary": "#303032",
+                        "inverse-primary": "#735c00",
+                        "surface": "#131314",
+                        "surface-container-low": "#1c1b1c",
+                        "error-container": "#93000a",
+                        "on-background": "#e5e2e3",
+                        "on-surface-variant": "#d0c5af",
+                        "secondary": "#c8c6c8",
+                        "outline": "#99907c",
+                        "secondary-fixed": "#e4e2e4",
+                        "surface-bright": "#39393a",
+                        "on-error": "#690005",
+                        "surface-container-highest": "#353436",
+                        "primary-container": "#d4af37",
+                        "surface-dim": "#131314",
+                        "tertiary-fixed": "#e2e2e4",
+                        "primary-fixed": "#ffe088",
+                        "on-error-container": "#ffdad6",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed-variant": "#574500",
+                        "tertiary-fixed-dim": "#c6c6c8",
+                        "on-secondary-fixed": "#1b1b1d",
+                        "surface-tint": "#e9c349",
+                        "background": "#131314",
+                        "on-tertiary-container": "#444547",
+                        "inverse-surface": "#e5e2e3",
+                        "on-secondary-container": "#b7b4b7",
+                        "on-tertiary-fixed-variant": "#454749",
+                        "on-surface": "#e5e2e3",
+                        "secondary-fixed-dim": "#c8c6c8",
+                        "on-primary": "#3c2f00",
+                        "on-secondary-fixed-variant": "#474649",
+                        "on-tertiary-fixed": "#1a1c1d",
+                        "surface-variant": "#353436",
+                        "outline-variant": "#4d4635",
+                        "tertiary": "#ceced0",
+                        "on-primary-container": "#554300",
+                        "tertiary-container": "#b2b3b5",
+                        "primary": "#f2ca50",
+                        "on-primary-fixed": "#241a00",
+                        "primary-fixed-dim": "#e9c349",
+                        "surface-container-lowest": "#0e0e0f",
+                        "surface-container": "#201f20",
+                        "surface-container-high": "#2a2a2b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "card-gap": "16px",
+                        "unit": "4px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Hanken Grotesk", "sans-serif"],
+                        "body-lg": ["Geist", "sans-serif"],
+                        "headline-md": ["Libre Caslon Text", "serif"],
+                        "headline-lg-mobile": ["Libre Caslon Text", "serif"],
+                        "label-md": ["Hanken Grotesk", "sans-serif"],
+                        "headline-sm": ["Libre Caslon Text", "serif"],
+                        "headline-lg": ["Libre Caslon Text", "serif"],
+                        "body-md": ["Geist", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["10px", { "lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #0D0D0E; color: #e5e2e3; -webkit-font-smoothing: antialiased; min-height: max(884px, 100dvh); }
+        .glass-panel {
+            background: rgba(26, 26, 28, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-panel-active {
+            background: rgba(26, 26, 28, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid #D4AF37;
+            border-left: 0.5px solid rgba(255, 255, 255, 0.1);
+            border-right: 0.5px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.05);
+        }
+        .nav-scrim { background: linear-gradient(180deg, rgba(13, 13, 14, 0) 0%, rgba(13, 13, 14, 0.85) 60%); }
+    </style>
+  </head>
+<body class="relative min-h-screen overflow-x-hidden font-body-md text-body-md flex flex-col items-center">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-3xl border-b border-white/10 shadow-none">
+<div class="flex items-center justify-between px-margin-mobile h-16 w-full max-w-2xl mx-auto">
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-300 active:scale-95 transition-transform" aria-label="Menu">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm text-primary tracking-tight">Nisteia</h1>
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-300 active:scale-95 transition-transform" aria-label="Profile">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="w-full max-w-2xl px-margin-mobile pt-28 pb-32 flex flex-col gap-8 relative z-10">
+<!-- Date Header -->
+<div class="flex flex-col items-center text-center space-y-1">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest">Today</span>
+<h2 class="font-body-lg text-body-lg text-on-surface">July 12 <span class="text-on-surface-variant mx-1">·</span> June 29 O.S.</h2>
+</div>
+<!-- Main Status Card -->
+<div class="glass-panel-active rounded-2xl p-8 flex flex-col items-center text-center gap-8 hover:border-primary/50 transition-all duration-500">
+<div class="flex flex-col items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Fasting Level</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">Strict Fast</h3>
+</div>
+<div class="w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+<!-- Food Icons Row -->
+<div class="flex justify-between w-full max-w-[280px]">
+<!-- Meat (Prohibited) -->
+<div class="flex flex-col items-center gap-2">
+<div class="relative w-14 h-14 rounded-full glass-panel flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl text-on-surface-variant">kebab_dining</span>
+<span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-error-container flex items-center justify-center border border-surface">
+<span class="material-symbols-outlined text-[12px] text-on-error-container">close</span>
+</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Meat</span>
+</div>
+<!-- Dairy (Prohibited) -->
+<div class="flex flex-col items-center gap-2">
+<div class="relative w-14 h-14 rounded-full glass-panel flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl text-on-surface-variant">icecream</span>
+<span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-error-container flex items-center justify-center border border-surface">
+<span class="material-symbols-outlined text-[12px] text-on-error-container">close</span>
+</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dairy</span>
+</div>
+<!-- Fish (Prohibited) -->
+<div class="flex flex-col items-center gap-2">
+<div class="relative w-14 h-14 rounded-full glass-panel flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl text-on-surface-variant">set_meal</span>
+<span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-error-container flex items-center justify-center border border-surface">
+<span class="material-symbols-outlined text-[12px] text-on-error-container">close</span>
+</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fish</span>
+</div>
+<!-- Wine (Prohibited) -->
+<div class="flex flex-col items-center gap-2">
+<div class="relative w-14 h-14 rounded-full glass-panel flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl text-on-surface-variant">wine_bar</span>
+<span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-error-container flex items-center justify-center border border-surface">
+<span class="material-symbols-outlined text-[12px] text-on-error-container">close</span>
+</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Wine</span>
+</div>
+<!-- Oil (Prohibited) -->
+<div class="flex flex-col items-center gap-2">
+<div class="relative w-14 h-14 rounded-full glass-panel flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl text-on-surface-variant">oil_barrel</span>
+<span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-error-container flex items-center justify-center border border-surface">
+<span class="material-symbols-outlined text-[12px] text-on-error-container">close</span>
+</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Oil</span>
+</div>
+</div>
+</div>
+<!-- Saints of the Day Card -->
+<div class="glass-panel rounded-2xl p-6 flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+<h4 class="font-body-lg text-body-lg text-on-surface">Saints of the Day</h4>
+</div>
+<ul class="flex flex-col gap-3">
+<li class="flex items-start gap-3">
+<div class="w-1.5 h-1.5 rounded-full bg-white/20 mt-2 flex-shrink-0"></div>
+<p class="font-body-md text-body-md leading-relaxed text-on-surface">Holy Glorious and All-Praised Leaders of the Apostles, Peter and Paul</p>
+</li>
+</ul>
+</div>
+</main>
+<!-- Scrim for floating nav -->
+<div class="fixed bottom-0 left-0 right-0 h-32 nav-scrim z-40 pointer-events-none"></div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 mb-margin-mobile mx-margin-mobile rounded-full overflow-hidden border border-white/10 shadow-[0_0_20px_rgba(212,175,55,0.05)] backdrop-blur-3xl bg-surface-container/60">
+<div class="flex justify-around items-center h-20 px-4 w-full">
+<a href="#" class="flex flex-col items-center justify-center text-primary drop-shadow-[0_0_8px_rgba(212,175,55,0.4)] active:scale-90 transition-transform duration-200 w-16">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">today</span>
+<span class="font-label-md text-label-md">Today</span>
+</a>
+<a href="../calendar_nisteia_final/code.html" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary/80 transition-all active:scale-90 duration-200 w-16">
+<span class="material-symbols-outlined mb-1">calendar_month</span>
+<span class="font-label-md text-label-md">Calendar</span>
+</a>
+<a href="../food_guide_nisteia_final/code.html" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary/80 transition-all active:scale-90 duration-200 w-16">
+<span class="material-symbols-outlined mb-1">restaurant_menu</span>
+<span class="font-label-md text-label-md">Guide</span>
+</a>
+<a href="../seasons_nisteia_final/code.html" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary/80 transition-all active:scale-90 duration-200 w-16">
+<span class="material-symbols-outlined mb-1">hourglass_empty</span>
+<span class="font-label-md text-label-md">Seasons</span>
+</a>
+</div>
+</nav>
+</body></html>

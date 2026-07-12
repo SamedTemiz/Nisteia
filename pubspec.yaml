@@ -1,0 +1,75 @@
+name: nisteia
+description: "Orthodox fasting assistant — 'what can I eat today?' Fasting-first, local-first, no server."
+publish_to: "none"
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+  flutter: ">=3.19.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+
+  # State management
+  flutter_riverpod: ^2.5.1
+
+  # Local persistence for user settings (calendar mode, jurisdiction, etc.)
+  shared_preferences: ^2.2.3
+
+  # Home screen widgets (iOS WidgetKit + Android AppWidget) — used from Faz 2
+  home_widget: ^0.6.0
+
+  # Local notification scheduling (evening fast reminders, season alerts).
+  flutter_local_notifications: ^18.0.1
+  timezone: ^0.9.4
+
+  # Material motion transitions (fade-through tab switches, shared-axis routes).
+  animations: ^2.0.11
+
+  # Opens the rule-error report mailto: link from Settings.
+  url_launcher: ^6.3.1
+
+  # One-time Pro purchase, direct Google Play Billing (no RevenueCat — karar
+  # günlüğü 2026-07-12: tek ürün + tek platform + backend-yok).
+  in_app_purchase: ^3.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+  # Generates Android launcher icons from assets/icon/ (build-time only).
+  flutter_launcher_icons: ^0.14.1
+
+  # test/validation compares the engine against snapshot data pulled from
+  # orthocal.info. http is only ever used by the snapshot-refresh script,
+  # never at app runtime (see architecture principle #1: local-first).
+  http: ^1.2.0
+
+# dart run flutter_launcher_icons — regenerates android/ mipmap icons.
+flutter_launcher_icons:
+  android: true
+  ios: false # v1 is Play-Store-only (karar günlüğü 2026-07-12)
+  image_path: "assets/icon/ic_legacy.png"
+  adaptive_icon_background: "assets/icon/ic_background.png"
+  adaptive_icon_foreground: "assets/icon/ic_foreground.png"
+  min_sdk_android: 21
+
+flutter:
+  generate: true # enables flutter gen-l10n from lib/l10n/*.arb
+  uses-material-design: true
+
+  assets:
+    # Public-domain iconography — see assets/images/ATTRIBUTION.md
+    - assets/images/pantocrator_sinai.jpg
+
+  fonts:
+    # EB Garamond (SIL Open Font License 1.1) — brand serif for display text.
+    # License: assets/fonts/EBGaramond-OFL.txt
+    - family: EBGaramond
+      fonts:
+        - asset: assets/fonts/EBGaramond.ttf

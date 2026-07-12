@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand background (AppColors.background) — the app is dark-only, so the
+         splash matches in both light and dark system themes. -->
+    <color name="nisteia_background">#16121C</color>
+</resources>
