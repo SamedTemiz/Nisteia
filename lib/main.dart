@@ -15,13 +15,15 @@ import 'theme/app_theme.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final prefs = await SharedPreferences.getInstance();
-  await NotificationService.instance.init();
   runApp(
     ProviderScope(
       overrides: [sharedPreferencesProvider.overrideWithValue(prefs)],
       child: const NisteiaApp(),
     ),
   );
+  // Fire-and-forget, after the first frame: notification setup must never be
+  // able to block (or, if a plugin misbehaves, blank) the app's launch.
+  unawaited(NotificationService.instance.init());
 }
 
 class NisteiaApp extends ConsumerWidget {

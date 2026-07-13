@@ -28,8 +28,11 @@ class NotificationService {
     try {
       tz_data.initializeTimeZones();
       await _plugin.initialize(
+        // A dedicated simple icon, NOT the adaptive launcher icon — pointing
+        // this at @mipmap/ic_launcher is a well-known native crash cause on
+        // real devices (see android/app/src/main/res/drawable/ic_notification.xml).
         const InitializationSettings(
-          android: AndroidInitializationSettings('@mipmap/ic_launcher'),
+          android: AndroidInitializationSettings('ic_notification'),
           iOS: DarwinInitializationSettings(),
         ),
       );
