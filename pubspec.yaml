@@ -1,7 +1,7 @@
 name: nisteia
 description: "Orthodox fasting assistant — 'what can I eat today?' Fasting-first, local-first, no server."
 publish_to: "none"
-version: 0.1.0+1
+version: 0.1.0+2
 
 environment:
   sdk: ">=3.3.0 <4.0.0"
@@ -20,8 +20,13 @@ dependencies:
   # Local persistence for user settings (calendar mode, jurisdiction, etc.)
   shared_preferences: ^2.2.3
 
-  # Home screen widgets (iOS WidgetKit + Android AppWidget) — used from Faz 2
-  home_widget: ^0.6.0
+  # NOTE: home_widget was here as a Faz-2 placeholder but is unused (no code
+  # references it). Removed 2026-07-14: it pulls in androidx.work transitively,
+  # and WorkManager's Room database fails to initialize under R8 in release
+  # builds ("Failed to create an instance of androidx.work.impl.WorkDatabase"),
+  # crashing the app before Flutter even starts — found via real-device
+  # logcat on the first Play-signed release. Re-add when Faz 2 widget work
+  # actually starts, with WorkManager ProGuard keep rules alongside it.
 
   # Local notification scheduling (evening fast reminders, season alerts).
   flutter_local_notifications: ^18.0.1

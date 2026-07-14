@@ -21,7 +21,7 @@ val keystoreProperties = Properties().apply {
 val hasReleaseKeystore = keystoreProperties.getProperty("storeFile") != null
 
 android {
-    namespace = "com.nisteia.nisteia"
+    namespace = "com.nisteia.app"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -33,7 +33,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.nisteia.nisteia"
+        applicationId = "com.nisteia.app"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
@@ -60,6 +60,15 @@ android {
             } else {
                 signingConfigs.getByName("debug")
             }
+            // Explicit (Flutter's plugin already enables this by default for
+            // `release`, but leaving it implicit is what let the WorkManager
+            // crash go unnoticed — see proguard-rules.pro for why).
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
 }

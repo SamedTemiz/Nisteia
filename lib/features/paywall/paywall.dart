@@ -34,11 +34,14 @@ class _Paywall extends ConsumerWidget {
     ref.listen(proProvider, (_, isPro) {
       if (isPro && context.mounted) Navigator.of(context).pop();
     });
+    // (label, delivered) — only the unlimited calendar ships in v1; the rest
+    // are real roadmap items (ROADMAP.md Faz 2/3) shown honestly as upcoming
+    // so the paywall never promises what isn't in the build yet.
     final features = [
-      l10n.proFeatCalendar,
-      l10n.proFeatWidgets,
-      l10n.proFeatMeals,
-      l10n.proFeatNotifs,
+      (l10n.proFeatCalendar, true),
+      (l10n.proFeatWidgets, false),
+      (l10n.proFeatMeals, false),
+      (l10n.proFeatNotifs, false),
     ];
     return Padding(
       padding: const EdgeInsets.fromLTRB(24, 4, 24, 32),
@@ -60,24 +63,48 @@ class _Paywall extends ConsumerWidget {
             ),
           ),
           const SizedBox(height: 20),
-          ...features.map((f) => Padding(
-                padding: const EdgeInsets.only(bottom: 12),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Icon(Icons.check_circle_outline,
-                        color: AppColors.gold, size: 20),
-                    const SizedBox(width: 12),
-                    Expanded(
-                      child: Text(f,
-                          style: const TextStyle(
-                              color: AppColors.ink,
-                              fontSize: 15,
-                              height: 1.35)),
+          ...features.map((f) {
+            final (label, delivered) = f;
+            final color = delivered ? AppColors.gold : AppColors.inkMuted;
+            return Padding(
+              padding: const EdgeInsets.only(bottom: 12),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Icon(
+                      delivered
+                          ? Icons.check_circle_outline
+                          : Icons.schedule_outlined,
+                      color: color,
+                      size: 20),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Text.rich(
+                      TextSpan(
+                        style: TextStyle(
+                            color: delivered
+                                ? AppColors.ink
+                                : AppColors.inkMuted,
+                            fontSize: 15,
+                            height: 1.35),
+                        children: [
+                          TextSpan(text: label),
+                          if (!delivered)
+                            TextSpan(
+                              text: '  ·  ${l10n.comingSoon}',
+                              style: const TextStyle(
+                                  color: AppColors.gold,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 12),
+                            ),
+                        ],
+                      ),
                     ),
-                  ],
-                ),
-              )),
+                  ),
+                ],
+              ),
+            );
+          }),
           const SizedBox(height: 12),
           FilledButton(
             onPressed: () async {

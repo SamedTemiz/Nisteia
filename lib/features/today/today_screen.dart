@@ -10,7 +10,6 @@ import '../../l10n/generated/app_localizations.dart';
 import '../../theme/app_theme.dart';
 import '../seasons/seasons_screen.dart';
 import '../settings/settings_screen.dart';
-import '../settings/sources_screen.dart';
 import '../shared/day_detail_sheet.dart';
 import 'day_saints.dart';
 import 'day_title.dart';
@@ -36,18 +35,9 @@ class TodayScreen extends ConsumerWidget {
     }
 
     return Scaffold(
-      drawer: const _AppDrawer(),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         centerTitle: true,
-        leading: Builder(
-          builder: (ctx) => IconButton(
-            icon: const Icon(Icons.menu),
-            color: AppColors.gold,
-            tooltip: l10n.menuTooltip,
-            onPressed: () => Scaffold.of(ctx).openDrawer(),
-          ),
-        ),
         title: Text(
           l10n.appTitle,
           style: const TextStyle(
@@ -88,61 +78,6 @@ class TodayScreen extends ConsumerWidget {
               _SaintsCard(day: day, l10n: l10n),
             ],
           ),
-        ),
-      ),
-    );
-  }
-}
-
-/// Navigation drawer opened by the app-bar menu button: Settings and the
-/// data-sources / attribution screen.
-class _AppDrawer extends StatelessWidget {
-  const _AppDrawer();
-
-  @override
-  Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
-
-    void go(Widget screen) {
-      Navigator.of(context)
-        ..pop() // close the drawer first
-        ..push(MaterialPageRoute<void>(builder: (_) => screen));
-    }
-
-    return Drawer(
-      backgroundColor: AppColors.background,
-      child: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(20, 28, 20, 20),
-              child: Text(
-                l10n.appTitle,
-                style: const TextStyle(
-                  fontFamily: kSerif,
-                  color: AppColors.gold,
-                  fontSize: 28,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ),
-            const Divider(color: AppColors.surface, height: 1),
-            ListTile(
-              leading:
-                  const Icon(Icons.settings_outlined, color: AppColors.gold),
-              title: Text(l10n.settingsTitle,
-                  style: const TextStyle(color: AppColors.ink)),
-              onTap: () => go(const SettingsScreen()),
-            ),
-            ListTile(
-              leading: const Icon(Icons.menu_book_outlined,
-                  color: AppColors.gold),
-              title: Text(l10n.sourcesTitle,
-                  style: const TextStyle(color: AppColors.ink)),
-              onTap: () => go(const SourcesScreen()),
-            ),
-          ],
         ),
       ),
     );

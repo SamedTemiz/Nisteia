@@ -28,33 +28,40 @@ Uygulamanın kalbi. UI'dan önce bu bitmeli ve kanıtlanmalı.
 - [x] Ayarlar (takvim, sıkılık, bildirim tercihleri, kaynak/atıf, disclaimer, hata bildirimi) → `lib/features/settings/`
 - [x] i18n altyapısı (tüm stringler ARB'de, yalnızca EN içerik)
 - [x] Tercih katmanı: shared_preferences + Riverpod (`lib/app/settings.dart`), navigasyon shell (`lib/app/home_shell.dart`)
-- [~] RevenueCat tek seferlik Pro IAP — paywall UI + tetikleyiciler hazır (`lib/features/paywall/`), gerçek satın alma akışı bağlanacak (gerçek RevenueCat hesabı/API anahtarı gerektiriyor — kullanıcı tarafında kurulacak)
+- [x] Tek seferlik Pro IAP — doğrudan Google Play Billing (`in_app_purchase`, RevenueCat yok, karar 2026-07-12), Play Console'da `nisteia_pro` ürünü ($3.99) oluşturuldu, **gerçek satın alma ile uçtan uca test edildi ve başarılı** (2026-07-15). Paywall'da yalnızca teslim edilen özellik (full calendar) gösteriliyor, kalan 3 vaat "Coming soon" etiketli (karar 2026-07-14, `lib/features/paywall/paywall.dart`)
 - [x] Bildirimler: akşamdan "yarın oruç" + sezon başlangıçları → `flutter_local_notifications` bağlandı (`lib/app/notification_service.dart`), onboarding tamamlanınca ve ayar değişince otomatik yeniden zamanlanıyor (`lib/main.dart` `_RootGate`). Web'de ve testlerde güvenli no-op (best-effort, try/catch ile uygulamayı asla çökertmez). ⚠️ Gerçek cihazda bildirim ateşlemesi bu ortamda (Android SDK cmdline-tools/emulator yok) doğrulanamadı — kod derleniyor ve mantık test edildi, ama gerçek cihaz testi gerekiyor.
 
 - [x] Modern geçişler: sekmeler arası Material fade-through (state korunur — takvim ayı/scroll kaybolmaz, `lib/app/home_shell.dart`), push edilen sayfalarda shared-axis (`animations` paketi, tema seviyesinde `lib/theme/app_theme.dart`)
 - [x] "Hata bildir" gerçek mailto linki (`url_launcher`; mail uygulaması yoksa adresli dialog'a düşer)
-- [x] Burger menü → navigation drawer (Settings + Kaynaklar) ve **Kaynaklar & atıf ekranı** (`lib/features/settings/sources_screen.dart`)
+- [x] Kaynaklar & atıf ekranı (`lib/features/settings/sources_screen.dart`), Ayarlar'dan erişilebilir. Today ekranındaki hamburger menü (drawer) **tamamen kaldırıldı** (karar 2026-07-14) — içeriği zaten profil ikonundan (Ayarlar) erişilebiliyordu, gereksiz ikinci giriş noktasıydı
 - [x] **Çoklu dil**: EN + EL/RO/RU/SR/BG ARB'leri, Settings'te dil seçici (sistem varsayılanı destekli), tüm tarihler locale-aware, hardcoded string ihlalleri temizlendi (seasons/settings/paywall/calendar). Desteklenmeyen sistem dili artık İngilizce'ye düşüyor (alfabetik-ilk-dil hatası düzeltildi). ⚠️ Çeviriler yerli konuşur incelemesi bekliyor; UK/KA (Ukraynaca/Gürcüce) sonraki dalga.
 - [x] Today durum kartına hafif blurlu kamu malı ikon arka planı (6. yy Sina Pantokrator'u, Wikimedia PD — `assets/images/ATTRIBUTION.md`)
 
-**Durum:** 6 ekran + navigasyon + onboarding + paywall stub + local notifications + modern geçişler çalışıyor; `flutter analyze` temiz, 68 test yeşil. Kalan gerçek-entegrasyon işleri: RevenueCat satın alma (hesap gerektirir), gerçek cihazda bildirim + mailto doğrulaması.
+**Durum: Faz 1 TAMAMLANDI.** 6 ekran + navigasyon + onboarding + gerçek Google Play Billing + local notifications + modern geçişler çalışıyor; `flutter analyze` temiz, 68 test yeşil. Bildirimler ve satın alma gerçek cihazda doğrulandı. **Uygulama 2026-07-15'te Play Store Production'a gönderildi ve gerçek satın alma testiyle onaylandı** (ayrıntılar Faz 2'de).
 
-## Faz 2 — Cila + Beta (Ekim 2026, ~4 hafta)
+## Faz 2 — Play Store yayını ✅ TAMAMLANDI (2026-07-14 – 2026-07-15, planlanandan ~3 ay erken)
 
 > ⚠️ 2026-07-12 kararı: **v1 yalnızca Play Store** — iOS işleri ertelendi (kod tabanı hazır kalır).
+> Not: Beta/kapalı test aşaması resmi olarak yapılmadı — hesap Google'ın zorunlu kapalı test eşiğinin altında kaldı, doğrudan Production'a geçildi (karar 2026-07-15). Formal ASO/beta geri bildirim döngüsü Faz 3'e kaydı.
 
-- [ ] Home screen widget (Android AppWidget) — Pro özelliği (~~iOS küçük/orta~~ ertelendi)
-- [ ] Play beta (internal → closed testing): r/OrthodoxChristianity + 2-3 cemaat Discord/Facebook grubundan 30-50 beta kullanıcı
-- [ ] Beta geri bildirimiyle kural motoru yurisdiksiyon ayarları düzeltmesi
-- [ ] ASO: anahtar kelimeler ("orthodox fasting", "orthodox calendar", "lent fasting guide"), ekran görüntüleri, mağaza metinleri
-- [ ] Play Console hesabı ($25 tek seferlik) + başvuru süreci (~~App Store~~ ertelendi)
-- [ ] RevenueCat hesabı (yalnızca Google Play platformu) + `purchases_flutter` entegrasyonu
-- [ ] Upload keystore üret (`keytool`, talimat `android/app/build.gradle.kts` içinde) + `android/key.properties`
+- [x] Play Console hesabı oluşturuldu, ödeme profili (bireysel) kuruldu
+- [x] Upload keystore üretildi (`keytool`) + `android/key.properties` (kullanıcı tarafından, gitignored)
+- [x] Android package ID kararı: `com.nisteia.app` (karar 2026-07-14)
+- [x] Release build sertlendirmesi: `isMinifyEnabled`/`isShrinkResources` açık, R8 keep kuralları (`android/app/proguard-rules.pro`) — `flutter_local_notifications`, Play Billing, WorkManager/Room için
+- [x] Release-only crash bulundu ve düzeltildi: kullanılmayan `home_widget` bağımlılığı → `androidx.work` → R8 altında WorkManager Room DB init hatası. Kaldırıldı (widget işi Faz 2.5/3'e ertelendi), gerçek cihazda `adb`/logcat ile doğrulandı
+- [x] Mağaza görselleri: feature graphic (1024×500, `assets/images/banner.jpg`, `nisteia-banner-2.jpg`), ekran görüntüleri, uygulama simgesi
+- [x] İçerik beyanları: içerik sınıflandırması, hedef kitle (18+), gizlilik politikası (`PRIVACY.md`, GitHub üzerinden), reklam beyanı (yok), sağlık uygulamaları beyanı, veri güvenliği anketi
+- [x] Tüm ülkeler/bölgeler seçildi (diaspora hedefi — coğrafi kısıtlama yok)
+- [x] `nisteia_pro` IAP ürünü oluşturuldu ve etkinleştirildi ($3.99, tek seferlik)
+- [x] **Production'a gönderildi ve gerçek satın alma ile uçtan uca doğrulandı** (2026-07-15)
+- [ ] Home screen widget (Android AppWidget) — Pro özelliği, `home_widget` paketiyle birlikte tekrar eklenecek (Faz 3'e kaydı)
+- [ ] Formal ASO (anahtar kelime optimizasyonu) ve topluluk beta geri bildirim döngüsü — launch sonrası, Faz 3
 
-## 🚀 Launch — Kasım başı 2026 (Nativity Fast 15 Kasım'dan 1-2 hafta önce)
+## 🚀 Launch — GERÇEKLEŞTİ: 2026-07-15 (Nativity Fast hedefinden ~4 ay erken)
 
-- [ ] ProductHunt değil (kitle orada değil) → Reddit, Orthodox Twitter/X, cemaat bültenleri, Ancient Faith podcast topluluk forumları
-- [ ] Launch fiyatı: Pro $3.99 (sonra $5.99)
+- [x] Launch fiyatı: Pro $3.99 (sonra $5.99'a çıkarılabilir)
+- [ ] Topluluk duyurusu: Reddit (r/OrthodoxChristianity), Orthodox Twitter/X, cemaat bültenleri, Ancient Faith podcast forumları — henüz yapılmadı, ProductHunt değil (kitle orada değil)
+- [ ] Destek e-postası: kod içindeki `hello@nisteia.app` placeholder'ı gerçek bir adrese (Gmail veya domain) bağlanacak
 
 ## Faz 3 — Büyük Perhiz hazırlığı (Aralık 2026 – Şubat 2027)
 
