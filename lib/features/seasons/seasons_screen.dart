@@ -6,6 +6,7 @@ import '../../app/settings.dart';
 import '../../core/models.dart';
 import '../../l10n/generated/app_localizations.dart';
 import '../../theme/app_theme.dart';
+import '../shared/scroll_fade.dart';
 import 'season_math.dart';
 
 final seasonOverviewProvider = Provider<SeasonOverview>((ref) {
@@ -42,27 +43,29 @@ class SeasonsScreen extends ConsumerWidget {
       ),
       body: SafeArea(
         top: false,
-        child: ListView(
-          padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
-          children: [
-            if (overview.active != null)
-              _ActiveCard(active: overview.active!, l10n: l10n),
-            if (overview.active != null) const SizedBox(height: 16),
-            if (overview.next != null)
-              _NextCard(next: overview.next!, l10n: l10n),
-            const SizedBox(height: 24),
-            Text(
-              l10n.seasonsTitle,
-              style: const TextStyle(
-                  fontFamily: kSerif,
-                  color: AppColors.ink,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600),
-            ),
-            const SizedBox(height: 12),
-            for (final s in majorFasts)
-              _FastListTile(season: s, label: seasonLabel(s, l10n)),
-          ],
+        child: ScrollFade(
+          child: ListView(
+            padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
+            children: [
+              if (overview.active != null)
+                _ActiveCard(active: overview.active!, l10n: l10n),
+              if (overview.active != null) const SizedBox(height: 16),
+              if (overview.next != null)
+                _NextCard(next: overview.next!, l10n: l10n),
+              const SizedBox(height: 24),
+              Text(
+                l10n.seasonsTitle,
+                style: const TextStyle(
+                    fontFamily: kSerif,
+                    color: AppColors.ink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600),
+              ),
+              const SizedBox(height: 12),
+              for (final s in majorFasts)
+                _FastListTile(season: s, label: seasonLabel(s, l10n)),
+            ],
+          ),
         ),
       ),
     );
@@ -140,8 +143,8 @@ class _NextCard extends StatelessWidget {
                       height: 1,
                       fontWeight: FontWeight.w600)),
               Text(l10n.daysUnit,
-                  style: const TextStyle(
-                      color: AppColors.inkMuted, fontSize: 12)),
+                  style:
+                      const TextStyle(color: AppColors.inkMuted, fontSize: 12)),
             ],
           ),
           const SizedBox(width: 20),

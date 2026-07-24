@@ -11,6 +11,7 @@ import '../../theme/app_theme.dart';
 import '../seasons/seasons_screen.dart';
 import '../settings/settings_screen.dart';
 import '../shared/day_detail_sheet.dart';
+import '../shared/scroll_fade.dart';
 import 'day_saints.dart';
 import 'day_title.dart';
 import 'level_style.dart';
@@ -63,20 +64,25 @@ class TodayScreen extends ConsumerWidget {
       ),
       body: SafeArea(
         top: false,
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              const SizedBox(height: 16),
-              _DateHeader(day: day, l10n: l10n),
-              const SizedBox(height: 28),
-              _StatusCard(day: day, l10n: l10n, reason: reason),
-              const SizedBox(height: 20),
-              const _WeekStrip(),
-              const SizedBox(height: 20),
-              _SaintsCard(day: day, l10n: l10n),
-            ],
+        child: ScrollFade(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                // The vertical rhythm is deliberately tight: on a 832dp-tall
+                // phone these gaps are what pushes the saints card under the
+                // fold, and they cost more than they give back visually.
+                const SizedBox(height: 8),
+                _DateHeader(day: day, l10n: l10n),
+                const SizedBox(height: 20),
+                _StatusCard(day: day, l10n: l10n, reason: reason),
+                const SizedBox(height: 16),
+                const _WeekStrip(),
+                const SizedBox(height: 16),
+                _SaintsCard(day: day, l10n: l10n),
+              ],
+            ),
           ),
         ),
       ),
@@ -161,41 +167,41 @@ class _StatusCard extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 28, horizontal: 20),
             child: Column(
               children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                width: 8,
-                height: 8,
-                decoration:
-                    BoxDecoration(color: levelColor, shape: BoxShape.circle),
-              ),
-              const SizedBox(width: 8),
-              Text(l10n.fastingLevel.toUpperCase(),
-                  style: eyebrowStyle(context)),
-            ],
-          ),
-          const SizedBox(height: 10),
-          Text(
-            levelLabel(day.level, l10n),
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontFamily: kSerif,
-              fontSize: 38,
-              height: 1.05,
-              fontWeight: FontWeight.w600,
-              color: AppColors.gold,
-            ),
-          ),
-          const SizedBox(height: 6),
-          Text(
-            reason,
-            textAlign: TextAlign.center,
-            style: const TextStyle(color: AppColors.inkMuted, fontSize: 14),
-          ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 8,
+                      height: 8,
+                      decoration: BoxDecoration(
+                          color: levelColor, shape: BoxShape.circle),
+                    ),
+                    const SizedBox(width: 8),
+                    Text(l10n.fastingLevel.toUpperCase(),
+                        style: eyebrowStyle(context)),
+                  ],
+                ),
+                const SizedBox(height: 10),
+                Text(
+                  levelLabel(day.level, l10n),
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontFamily: kSerif,
+                    fontSize: 38,
+                    height: 1.05,
+                    fontWeight: FontWeight.w600,
+                    color: AppColors.gold,
+                  ),
+                ),
+                const SizedBox(height: 6),
+                Text(
+                  reason,
+                  textAlign: TextAlign.center,
+                  style:
+                      const TextStyle(color: AppColors.inkMuted, fontSize: 14),
+                ),
                 const SizedBox(height: 20),
-                Divider(
-                    color: levelColor.withValues(alpha: 0.5), thickness: 1),
+                Divider(color: levelColor.withValues(alpha: 0.5), thickness: 1),
                 const SizedBox(height: 20),
                 _FoodRow(allowed: day.allowed, l10n: l10n),
               ],
@@ -217,35 +223,33 @@ class _FoodRow extends StatelessWidget {
   Widget build(BuildContext context) {
     String a11y(String label, bool ok) =>
         '$label: ${ok ? l10n.permitted : l10n.notPermitted}';
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        _FoodIcon(
-            icon: Icons.restaurant,
-            label: l10n.foodMeat,
-            permitted: allowed.meat,
-            semanticLabel: a11y(l10n.foodMeat, allowed.meat)),
-        _FoodIcon(
-            icon: Icons.egg_outlined,
-            label: l10n.foodDairy,
-            permitted: allowed.dairy,
-            semanticLabel: a11y(l10n.foodDairy, allowed.dairy)),
-        _FoodIcon(
-            icon: Icons.set_meal_outlined,
-            label: l10n.foodFish,
-            permitted: allowed.fish,
-            semanticLabel: a11y(l10n.foodFish, allowed.fish)),
-        _FoodIcon(
-            icon: Icons.wine_bar_outlined,
-            label: l10n.foodWine,
-            permitted: allowed.wine,
-            semanticLabel: a11y(l10n.foodWine, allowed.wine)),
-        _FoodIcon(
-            icon: Icons.water_drop_outlined,
-            label: l10n.foodOil,
-            permitted: allowed.oil,
-            semanticLabel: a11y(l10n.foodOil, allowed.oil)),
-      ],
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        // Five fixed 52dp circles need 260dp before any gap. A 320dp-wide
+        // device leaves ~240dp inside this card, and the row overflowed by
+        // exactly that difference. Narrow widths are not just old hardware:
+        // turning Display size up on a current phone shrinks dp width too.
+        final diameter = (constraints.maxWidth / 5 - 6).clamp(34.0, 52.0);
+        Widget slot(IconData icon, String label, bool permitted) => Expanded(
+              child: _FoodIcon(
+                icon: icon,
+                label: label,
+                permitted: permitted,
+                diameter: diameter,
+                semanticLabel: a11y(label, permitted),
+              ),
+            );
+        return Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            slot(Icons.restaurant, l10n.foodMeat, allowed.meat),
+            slot(Icons.egg_outlined, l10n.foodDairy, allowed.dairy),
+            slot(Icons.set_meal_outlined, l10n.foodFish, allowed.fish),
+            slot(Icons.wine_bar_outlined, l10n.foodWine, allowed.wine),
+            slot(Icons.water_drop_outlined, l10n.foodOil, allowed.oil),
+          ],
+        );
+      },
     );
   }
 }
@@ -256,12 +260,16 @@ class _FoodIcon extends StatelessWidget {
     required this.label,
     required this.permitted,
     required this.semanticLabel,
+    required this.diameter,
   });
 
   final IconData icon;
   final String label;
   final bool permitted;
   final String semanticLabel;
+
+  /// Circle size, chosen by [_FoodRow] from the width actually available.
+  final double diameter;
 
   @override
   Widget build(BuildContext context) {
@@ -276,8 +284,8 @@ class _FoodIcon extends StatelessWidget {
             clipBehavior: Clip.none,
             children: [
               Container(
-                width: 52,
-                height: 52,
+                width: diameter,
+                height: diameter,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   border: Border.all(
@@ -287,7 +295,7 @@ class _FoodIcon extends StatelessWidget {
                       : Colors.transparent,
                 ),
                 child: Icon(icon,
-                    size: 24,
+                    size: diameter * 0.46,
                     color: permitted ? fg : fg.withValues(alpha: 0.55)),
               ),
               Positioned(
@@ -301,7 +309,7 @@ class _FoodIcon extends StatelessWidget {
                   padding: const EdgeInsets.all(1),
                   child: Icon(
                     permitted ? Icons.check_circle : Icons.cancel,
-                    size: 16,
+                    size: diameter * 0.31,
                     color: permitted ? allowColor : AppColors.inkMuted,
                   ),
                 ),
@@ -309,7 +317,10 @@ class _FoodIcon extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 8),
+          // Centred and free to wrap: the slot is now only a fifth of the card,
+          // and these five words are translated into six languages.
           Text(label,
+              textAlign: TextAlign.center,
               style: TextStyle(
                   fontSize: 11, color: fg, fontWeight: FontWeight.w600)),
         ],
@@ -342,13 +353,18 @@ class _SaintsCard extends StatelessWidget {
             children: [
               const Icon(Icons.auto_awesome, color: AppColors.gold, size: 20),
               const SizedBox(width: 8),
-              Text(
-                l10n.saintsOfTheDay,
-                style: const TextStyle(
-                  fontFamily: kSerif,
-                  fontSize: 20,
-                  color: AppColors.ink,
-                  fontWeight: FontWeight.w600,
+              // Expanded, not bare: the heading is translated into six
+              // languages and scaled by the system font setting, either of
+              // which can outgrow the row.
+              Expanded(
+                child: Text(
+                  l10n.saintsOfTheDay,
+                  style: const TextStyle(
+                    fontFamily: kSerif,
+                    fontSize: 20,
+                    color: AppColors.ink,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ),
             ],
@@ -415,8 +431,8 @@ class _WeekStrip extends ConsumerWidget {
                     child: Column(
                       children: [
                         Text(
-                          DateFormat.E(Localizations.localeOf(context)
-                                  .toString())
+                          DateFormat.E(
+                                  Localizations.localeOf(context).toString())
                               .format(d.date)
                               .characters
                               .first

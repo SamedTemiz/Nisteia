@@ -6,6 +6,7 @@ import '../../app/settings.dart';
 import '../../core/models.dart';
 import '../../l10n/generated/app_localizations.dart';
 import '../../theme/app_theme.dart';
+import '../shared/scroll_fade.dart';
 import '../onboarding/option_card.dart';
 import '../paywall/paywall.dart';
 import '../paywall/purchase_service.dart';
@@ -43,119 +44,123 @@ class SettingsScreen extends ConsumerWidget {
       ),
       body: SafeArea(
         top: false,
-        child: ListView(
-          padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
-          children: [
-            _Section(l10n.settingsSectionCalendar),
-            OptionCard(
-              title: l10n.calendarNew,
-              subtitle: l10n.calendarNewSubtitle,
-              selected: settings.calendar == Calendar.newCalendar,
-              onTap: () => controller.setCalendar(Calendar.newCalendar),
-            ),
-            OptionCard(
-              title: l10n.calendarOld,
-              subtitle: l10n.calendarOldSubtitle,
-              selected: settings.calendar == Calendar.oldCalendar,
-              onTap: () => controller.setCalendar(Calendar.oldCalendar),
-            ),
-            const SizedBox(height: 8),
-            OptionCard(
-              title: l10n.strictnessCommon,
-              subtitle: l10n.strictnessCommonSubtitle,
-              selected: settings.strictness == Strictness.common,
-              onTap: () => controller.setStrictness(Strictness.common),
-            ),
-            OptionCard(
-              title: l10n.strictnessMonastic,
-              subtitle: l10n.strictnessMonasticSubtitle,
-              selected: settings.strictness == Strictness.monastic,
-              onTap: () => controller.setStrictness(Strictness.monastic),
-            ),
-            const SizedBox(height: 8),
-            _TapRow(
-              icon: Icons.translate,
-              label:
-                  '${l10n.language} · ${_languageLabel(settings.localeCode, l10n)}',
-              onTap: () => _pickLanguage(context, l10n, settings.localeCode,
-                  controller.setLocale),
-            ),
-            const SizedBox(height: 24),
-            _Section(l10n.settingsSectionNotifications),
-            _SwitchRow(
-              label: l10n.settingsEveningReminder,
-              value: settings.eveningReminder,
-              onChanged: controller.setEveningReminder,
-            ),
-            _SwitchRow(
-              label: l10n.settingsSeasonAlerts,
-              value: settings.seasonAlerts,
-              onChanged: controller.setSeasonAlerts,
-            ),
-            const SizedBox(height: 24),
-            _Section(l10n.settingsProStatus),
-            if (ref.watch(proProvider))
-              _Card(
-                child: Row(
-                  children: [
-                    const Icon(Icons.workspace_premium,
-                        color: AppColors.gold, size: 22),
-                    const SizedBox(width: 12),
-                    Expanded(
-                      child: Text(l10n.proThanks,
-                          style: const TextStyle(
-                              color: AppColors.ink,
-                              fontSize: 14,
-                              height: 1.4)),
-                    ),
-                  ],
-                ),
-              )
-            else ...[
+        child: ScrollFade(
+          child: ListView(
+            padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
+            children: [
+              _Section(l10n.settingsSectionCalendar),
+              OptionCard(
+                title: l10n.calendarNew,
+                subtitle: l10n.calendarNewSubtitle,
+                selected: settings.calendar == Calendar.newCalendar,
+                onTap: () => controller.setCalendar(Calendar.newCalendar),
+              ),
+              OptionCard(
+                title: l10n.calendarOld,
+                subtitle: l10n.calendarOldSubtitle,
+                selected: settings.calendar == Calendar.oldCalendar,
+                onTap: () => controller.setCalendar(Calendar.oldCalendar),
+              ),
+              const SizedBox(height: 8),
+              OptionCard(
+                title: l10n.strictnessCommon,
+                subtitle: l10n.strictnessCommonSubtitle,
+                selected: settings.strictness == Strictness.common,
+                onTap: () => controller.setStrictness(Strictness.common),
+              ),
+              OptionCard(
+                title: l10n.strictnessMonastic,
+                subtitle: l10n.strictnessMonasticSubtitle,
+                selected: settings.strictness == Strictness.monastic,
+                onTap: () => controller.setStrictness(Strictness.monastic),
+              ),
+              const SizedBox(height: 8),
               _TapRow(
-                icon: Icons.workspace_premium_outlined,
-                label: l10n.proUnlock,
-                onTap: () => showPaywall(context),
+                icon: Icons.translate,
+                label:
+                    '${l10n.language} · ${_languageLabel(settings.localeCode, l10n)}',
+                onTap: () => _pickLanguage(
+                    context, l10n, settings.localeCode, controller.setLocale),
+              ),
+              const SizedBox(height: 24),
+              _Section(l10n.settingsSectionNotifications),
+              _SwitchRow(
+                label: l10n.settingsEveningReminder,
+                value: settings.eveningReminder,
+                onChanged: controller.setEveningReminder,
+              ),
+              _SwitchRow(
+                label: l10n.settingsSeasonAlerts,
+                value: settings.seasonAlerts,
+                onChanged: controller.setSeasonAlerts,
+              ),
+              const SizedBox(height: 24),
+              _Section(l10n.settingsProStatus),
+              if (ref.watch(proProvider))
+                _Card(
+                  child: Row(
+                    children: [
+                      const Icon(Icons.workspace_premium,
+                          color: AppColors.gold, size: 22),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: Text(l10n.proThanks,
+                            style: const TextStyle(
+                                color: AppColors.ink,
+                                fontSize: 14,
+                                height: 1.4)),
+                      ),
+                    ],
+                  ),
+                )
+              else ...[
+                _TapRow(
+                  icon: Icons.workspace_premium_outlined,
+                  label: l10n.proUnlock,
+                  onTap: () => showPaywall(context),
+                ),
+                _TapRow(
+                  icon: Icons.restore,
+                  label: l10n.settingsRestore,
+                  onTap: () async {
+                    final ok = await ref.read(proProvider.notifier).restore();
+                    if (!ok && context.mounted) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text(l10n.purchasesLater)),
+                      );
+                    }
+                  },
+                ),
+              ],
+              const SizedBox(height: 24),
+              _Section(l10n.settingsSectionAbout),
+              _Card(
+                  child: Text(l10n.settingsSourcesBody,
+                      style: const TextStyle(
+                          color: AppColors.ink, fontSize: 14, height: 1.5))),
+              const SizedBox(height: 10),
+              _Card(
+                  child: Text(l10n.disclaimer,
+                      style: const TextStyle(
+                          color: AppColors.inkMuted,
+                          fontSize: 13,
+                          height: 1.5))),
+              const SizedBox(height: 10),
+              _TapRow(
+                icon: Icons.menu_book_outlined,
+                label: l10n.sourcesTitle,
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                      builder: (_) => const SourcesScreen()),
+                ),
               ),
               _TapRow(
-                icon: Icons.restore,
-                label: l10n.settingsRestore,
-                onTap: () async {
-                  final ok =
-                      await ref.read(proProvider.notifier).restore();
-                  if (!ok && context.mounted) {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text(l10n.purchasesLater)),
-                    );
-                  }
-                },
+                icon: Icons.bug_report_outlined,
+                label: l10n.settingsReportError,
+                onTap: () => _reportError(context, l10n),
               ),
             ],
-            const SizedBox(height: 24),
-            _Section(l10n.settingsSectionAbout),
-            _Card(
-                child: Text(l10n.settingsSourcesBody,
-                    style: const TextStyle(
-                        color: AppColors.ink, fontSize: 14, height: 1.5))),
-            const SizedBox(height: 10),
-            _Card(
-                child: Text(l10n.disclaimer,
-                    style: const TextStyle(
-                        color: AppColors.inkMuted, fontSize: 13, height: 1.5))),
-            const SizedBox(height: 10),
-            _TapRow(
-              icon: Icons.menu_book_outlined,
-              label: l10n.sourcesTitle,
-              onTap: () => Navigator.of(context).push(
-                MaterialPageRoute<void>(builder: (_) => const SourcesScreen()),
-              ),
-            ),
-            _TapRow(
-              icon: Icons.bug_report_outlined,
-              label: l10n.settingsReportError,
-              onTap: () => _reportError(context, l10n),
-            ),
-          ],
+          ),
         ),
       ),
     );

@@ -6,6 +6,7 @@ import '../../app/day_providers.dart';
 import '../../core/models.dart';
 import '../../l10n/generated/app_localizations.dart';
 import '../../theme/app_theme.dart';
+import '../shared/scroll_fade.dart';
 import '../paywall/paywall.dart';
 import '../paywall/purchase_service.dart';
 import '../shared/day_detail_sheet.dart';
@@ -139,55 +140,61 @@ class _MonthGrid extends ConsumerWidget {
     final today = DateTime.now();
     final todayKey = DateTime(today.year, today.month, today.day);
 
-    return SingleChildScrollView(
-      child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 16),
-        padding: const EdgeInsets.all(12),
-        decoration: BoxDecoration(
-          color: AppColors.surface.withValues(alpha: 0.5),
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                // Sunday-first header, localized (grid below is Sunday-first).
-                for (var i = 0; i < 7; i++)
-                  Expanded(
-                    child: Center(
-                      child: Text(
-                        DateFormat.E(
-                                Localizations.localeOf(context).toString())
-                            // 2023-01-01 was a Sunday.
-                            .format(DateTime(2023, 1, 1 + i))
-                            .toUpperCase(),
-                        style: const TextStyle(
-                            color: AppColors.inkMuted,
-                            fontSize: 11,
-                            fontWeight: FontWeight.w700,
-                            letterSpacing: 0.5),
-                      ),
-                    ),
-                  ),
-              ],
-            ),
-            const SizedBox(height: 8),
-            for (var week = 0; week < 6; week++)
+    return ScrollFade(
+      child: SingleChildScrollView(
+        // The month grid is six full weeks tall; on a short viewport the last
+        // row sits below the fold with the legend butting up against it.
+        padding: const EdgeInsets.only(bottom: 12),
+        child: Container(
+          margin: const EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsets.all(12),
+          decoration: BoxDecoration(
+            color: AppColors.surface.withValues(alpha: 0.5),
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Column(
+            children: [
               Row(
                 children: [
-                  for (var d = 0; d < 7; d++)
+                  // Sunday-first header, localized (grid below is Sunday-first).
+                  for (var i = 0; i < 7; i++)
                     Expanded(
-                      child: _DayCell(
-                        date: gridStart.add(Duration(days: week * 7 + d)),
-                        inMonth:
-                            gridStart.add(Duration(days: week * 7 + d)).month ==
-                                anchor.month,
-                        todayKey: todayKey,
+                      child: Center(
+                        child: Text(
+                          DateFormat.E(
+                                  Localizations.localeOf(context).toString())
+                              // 2023-01-01 was a Sunday.
+                              .format(DateTime(2023, 1, 1 + i))
+                              .toUpperCase(),
+                          style: const TextStyle(
+                              color: AppColors.inkMuted,
+                              fontSize: 11,
+                              fontWeight: FontWeight.w700,
+                              letterSpacing: 0.5),
+                        ),
                       ),
                     ),
                 ],
               ),
-          ],
+              const SizedBox(height: 8),
+              for (var week = 0; week < 6; week++)
+                Row(
+                  children: [
+                    for (var d = 0; d < 7; d++)
+                      Expanded(
+                        child: _DayCell(
+                          date: gridStart.add(Duration(days: week * 7 + d)),
+                          inMonth: gridStart
+                                  .add(Duration(days: week * 7 + d))
+                                  .month ==
+                              anchor.month,
+                          todayKey: todayKey,
+                        ),
+                      ),
+                  ],
+                ),
+            ],
+          ),
         ),
       ),
     );

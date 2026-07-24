@@ -125,8 +125,7 @@ class NotificationService {
         FastSeason.none => '',
       };
 
-  String _levelName(FastLevel level, AppLocalizations l10n) =>
-      switch (level) {
+  String _levelName(FastLevel level, AppLocalizations l10n) => switch (level) {
         FastLevel.strict => l10n.levelStrict,
         FastLevel.wineOil => l10n.levelWineOil,
         FastLevel.fishWineOil => l10n.levelFishWineOil,

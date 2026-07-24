@@ -82,9 +82,8 @@ class _Paywall extends ConsumerWidget {
                     child: Text.rich(
                       TextSpan(
                         style: TextStyle(
-                            color: delivered
-                                ? AppColors.ink
-                                : AppColors.inkMuted,
+                            color:
+                                delivered ? AppColors.ink : AppColors.inkMuted,
                             fontSize: 15,
                             height: 1.35),
                         children: [

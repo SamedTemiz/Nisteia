@@ -14,10 +14,12 @@
 # after `flutter build apk` returns) rather than trusting any earlier log
 # content or process/task "success" status -- both have been seen to lie.
 
+param([ValidateSet('--debug', '--release')][string]$Mode = '--debug')
+
 $log = "C:\Users\helmsdeep\MyProjects\nisteia\apk_build.log"
 Remove-Item $log -ErrorAction SilentlyContinue
 
-$cmd = "cmd.exe /c C:\Users\helmsdeep\MyProjects\nisteia\tool\build_apk.bat"
+$cmd = "cmd.exe /c C:\Users\helmsdeep\MyProjects\nisteia\tool\build_apk.bat $Mode"
 $result = Invoke-CimMethod -ClassName Win32_Process -MethodName Create -Arguments @{ CommandLine = $cmd }
 
 if ($result.ReturnValue -ne 0) {

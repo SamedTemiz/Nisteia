@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/models.dart';
 import '../../l10n/generated/app_localizations.dart';
 import '../../theme/app_theme.dart';
+import '../shared/scroll_fade.dart';
 import '../today/level_style.dart';
 import '../today/today_providers.dart';
 
@@ -50,25 +51,27 @@ class GuideScreen extends ConsumerWidget {
       ),
       body: SafeArea(
         top: false,
-        child: ListView(
-          padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
-          children: [
-            _LevelBanner(day: day, l10n: l10n),
-            const SizedBox(height: 20),
-            _FoodList(
-              title: l10n.foodAllowed,
-              items: allowed,
-              allowed: true,
-            ),
-            const SizedBox(height: 16),
-            _FoodList(
-              title: l10n.foodAvoided,
-              items: avoided,
-              allowed: false,
-            ),
-            const SizedBox(height: 20),
-            _ShellfishNote(text: l10n.shellfishNote),
-          ],
+        child: ScrollFade(
+          child: ListView(
+            padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
+            children: [
+              _LevelBanner(day: day, l10n: l10n),
+              const SizedBox(height: 20),
+              _FoodList(
+                title: l10n.foodAllowed,
+                items: allowed,
+                allowed: true,
+              ),
+              const SizedBox(height: 16),
+              _FoodList(
+                title: l10n.foodAvoided,
+                items: avoided,
+                allowed: false,
+              ),
+              const SizedBox(height: 20),
+              _ShellfishNote(text: l10n.shellfishNote),
+            ],
+          ),
         ),
       ),
     );

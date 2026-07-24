@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -14,6 +15,14 @@ import 'theme/app_theme.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // Portrait only. Every screen is a single tall column of cards; in landscape
+  // the viewport loses two thirds of its height and the layout degrades into
+  // scrolling for one card at a time. Declared here rather than only in the
+  // Android manifest so the iOS target inherits it too.
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
   final prefs = await SharedPreferences.getInstance();
   runApp(
     ProviderScope(
@@ -31,8 +40,7 @@ class NisteiaApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final localeCode =
-        ref.watch(settingsProvider.select((s) => s.localeCode));
+    final localeCode = ref.watch(settingsProvider.select((s) => s.localeCode));
     return MaterialApp(
       onGenerateTitle: (context) => AppLocalizations.of(context)!.appTitle,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
