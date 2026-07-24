@@ -61,7 +61,7 @@ Uygulamanın kalbi. UI'dan önce bu bitmeli ve kanıtlanmalı.
 
 - [x] Launch fiyatı: Pro $3.99 (sonra $5.99'a çıkarılabilir)
 - [ ] Topluluk duyurusu: Reddit (r/OrthodoxChristianity), Orthodox Twitter/X, cemaat bültenleri, Ancient Faith podcast forumları — henüz yapılmadı, ProductHunt değil (kitle orada değil)
-- [ ] Destek e-postası: kod içindeki `hello@nisteia.app` placeholder'ı gerçek bir adrese (Gmail veya domain) bağlanacak
+- [x] Destek e-postası: `hello@nisteia.app` placeholder'ı `stforge.dev@gmail.com` ile değiştirildi (2026-07-25)
 
 ## Faz 3 — Büyük Perhiz hazırlığı (Aralık 2026 – Şubat 2027)
 

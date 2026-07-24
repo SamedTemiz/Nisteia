@@ -23,7 +23,7 @@ delete, or port. Uninstalling the app removes all locally stored settings.
 
 ## Contact
 
-Questions or concerns: **hello@nisteia.app**
+Questions or concerns: **stforge.dev@gmail.com**
 
 ## Changes
 

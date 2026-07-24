@@ -84,7 +84,7 @@ Panelde sırayla dolduracakların:
 |---|---|
 | Kategori | **Yaşam Tarzı (Lifestyle)** |
 | Etiketler | Lifestyle, Events |
-| İletişim e-postası | hello@nisteia.app (ya da kişisel adres — mağazada görünür) |
+| İletişim e-postası | stforge.dev@gmail.com (ya da kişisel adres — mağazada görünür) |
 | Web sitesi | GitHub repo veya boş |
 
 ---
@@ -163,7 +163,7 @@ New/Old calendar, 6 languages. No account, no ads, no subscription.
 ## 6. Yayın sonrası ilk hafta
 
 - Play Console → Yorumlar: **her yoruma cevap ver** (güven = bu niş için her şey).
-- Kural hatası bildirimi gelirse: `hello@nisteia.app` → motoru orthocal'a karşı test et → 48 saat içinde yama.
+- Kural hatası bildirimi gelirse: `stforge.dev@gmail.com` → motoru orthocal'a karşı test et → 48 saat içinde yama.
 - Sıralama anahtar kelimeleri zaten başlık+açıklamada: *orthodox fasting, orthodox calendar, lent*.
 
 ## Sık yapılan hatalar (bizden kaçınılmış olanlar ✓)
