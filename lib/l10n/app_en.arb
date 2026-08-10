@@ -154,7 +154,7 @@
   "@beginsOn": {"placeholders": {"date": {"type": "String"}}},
 
   "purchasesLater": "Purchases arrive in a later build.",
-  "reportErrorBody": "Email stforge.dev@gmail.com with the date and what looked wrong. Rule-accuracy reports are taken seriously.",
+  "reportErrorBody": "Email nisteia@stforge.dev with the date and what looked wrong. Rule-accuracy reports are taken seriously.",
   "ok": "OK",
 
   "proThanks": "Pro is active — thank you for supporting Nisteia.",

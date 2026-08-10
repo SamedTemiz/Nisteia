@@ -1,7 +1,7 @@
 # Play Store'a Çıkış Rehberi — Nisteia
 
 > Hedef: internal test → kapalı test → production. Launch penceresi: Nativity Fast (15 Kas 2026) öncesi.
-> Paket adı: `com.nisteia.nisteia` · IAP ürünü: `nisteia_pro` ($3.99) · Uygulama ücretsiz + tek IAP.
+> Paket adı: `com.nisteia.app` · IAP ürünü: `nisteia_pro` ($3.99) · Uygulama ücretsiz + tek IAP.
 
 ---
 
@@ -29,8 +29,10 @@ flutter build appbundle --release
 Çıktı: `build\app\outputs\bundle\release\app-release.aab` — Play'e yüklenecek dosya bu (APK değil).
 
 ### 0.4 Gizlilik politikası URL'si (Play zorunlu tutuyor — veri toplamasak bile)
-En kolay yol: repo'ya `PRIVACY.md` ekle → GitHub'da yayınla → URL'sini kullan
-(`https://github.com/SamedTemiz/Nisteia/blob/main/PRIVACY.md`).
+**Güncel URL: `https://stforge.dev/nisteia/privacy`** — kaynağı
+[`stforge-site`](https://github.com/SamedTemiz/stforge-site) reposunda,
+Cloudflare üzerinden yayında (2026-08-10'dan beri). Repodaki `PRIVACY.md` artık
+sadece oraya işaret eden bir yönlendirme; metni iki yerde tutma.
 İçerik özü: *"Nisteia hiçbir kişisel veri toplamaz, iletmez, saklamaz. Hesap yok, analitik yok. Tüm hesaplama cihazda yapılır. Satın almalar Google Play tarafından işlenir."*
 
 ---
@@ -54,7 +56,7 @@ En kolay yol: repo'ya `PRIVACY.md` ekle → GitHub'da yayınla → URL'sini kull
 Panelde sırayla dolduracakların:
 
 ### 2.1 Gizlilik politikası
-- URL: yukarıdaki GitHub linki.
+- URL: `https://stforge.dev/nisteia/privacy` (bkz. 0.4).
 
 ### 2.2 Uygulama erişimi (App access)
 - **"Tüm işlevler kısıtlama olmadan kullanılabilir"** — login yok, hepsi açık.
@@ -84,8 +86,8 @@ Panelde sırayla dolduracakların:
 |---|---|
 | Kategori | **Yaşam Tarzı (Lifestyle)** |
 | Etiketler | Lifestyle, Events |
-| İletişim e-postası | stforge.dev@gmail.com (ya da kişisel adres — mağazada görünür) |
-| Web sitesi | GitHub repo veya boş |
+| İletişim e-postası | `nisteia@stforge.dev` (Cloudflare Email Routing ile gmail'e düşer) |
+| Web sitesi | `https://stforge.dev/nisteia` |
 
 ---
 
@@ -114,11 +116,18 @@ mismatches. Fasting accuracy is never behind a paywall.
 Private by design: no account, no login, no ads, no analytics. Nothing leaves
 your phone.
 
-Nisteia Pro (one-time $3.99, NO subscription): unlimited calendar years,
-home-screen widgets, meal planner and fasting recipes.
+Nisteia Pro: a single $3.99 unlock, no subscription — pay once, keep it forever.
+Pro opens the full calendar so you can browse any year, forward and back.
+Everything else, including every fasting rule, is free.
 
 Fasting practice is personal — consult your priest for your own situation.
 ```
+
+> ⚠️ Pro paragrafı 2026-08-10'da düzeltildi. Önceki hali widget, öğün planlayıcı
+> ve tarif vaat ediyordu; üçü de kodda yok (yalnızca full calendar teslim
+> edildi, bkz. `lib/features/paywall/paywall.dart`). Yayınlanmamış özelliği
+> "yakında" diye bile yazma — Google'ın politikasına aykırı ve uygulama içi
+> paywall'un dürüstlüğünü boşa çıkarır.
 
 **Görseller (yüklemeden yayın olmaz):**
 | Varlık | Boyut | Not |
@@ -138,7 +147,7 @@ Fasting practice is personal — consult your priest for your own situation.
    |---|---|
    | Ürün kimliği | `nisteia_pro` (kodla birebir aynı — DEĞİŞTİRME) |
    | Ad | `Nisteia Pro` |
-   | Açıklama | `One-time unlock: full calendar, widgets, meal planner. No subscription.` |
+   | Açıklama | `One-time unlock for the full calendar — browse any year, forward and back. No subscription.` (2026-08-10'da düzeltildi; eskisi widget + meal planner vaat ediyordu) |
    | Fiyat | $3.99 (launch sonrası $5.99'a yükseltilebilir) |
    | Tür | Tek seferlik (managed/non-consumable) |
    → **Etkinleştir**'e basmayı unutma.
@@ -163,7 +172,7 @@ New/Old calendar, 6 languages. No account, no ads, no subscription.
 ## 6. Yayın sonrası ilk hafta
 
 - Play Console → Yorumlar: **her yoruma cevap ver** (güven = bu niş için her şey).
-- Kural hatası bildirimi gelirse: `stforge.dev@gmail.com` → motoru orthocal'a karşı test et → 48 saat içinde yama.
+- Kural hatası bildirimi gelirse: `nisteia@stforge.dev` → motoru orthocal'a karşı test et → 48 saat içinde yama.
 - Sıralama anahtar kelimeleri zaten başlık+açıklamada: *orthodox fasting, orthodox calendar, lent*.
 
 ## Sık yapılan hatalar (bizden kaçınılmış olanlar ✓)

@@ -171,7 +171,7 @@ class SettingsScreen extends ConsumerWidget {
   Future<void> _reportError(BuildContext context, AppLocalizations l10n) async {
     final uri = Uri(
       scheme: 'mailto',
-      path: 'stforge.dev@gmail.com',
+      path: 'nisteia@stforge.dev',
       query: 'subject=${Uri.encodeComponent(l10n.settingsReportSubject)}',
     );
     var launched = false;
