@@ -63,6 +63,8 @@ Uygulamanın kalbi. UI'dan önce bu bitmeli ve kanıtlanmalı.
 - [ ] Topluluk duyurusu: Reddit (r/OrthodoxChristianity), Orthodox Twitter/X, cemaat bültenleri, Ancient Faith podcast forumları — henüz yapılmadı, ProductHunt değil (kitle orada değil)
 - [x] Destek e-postası: `hello@nisteia.app` placeholder'ı `stforge.dev@gmail.com` ile değiştirildi (2026-07-25), 2026-08-10'da `nisteia@stforge.dev` oldu (Cloudflare Email Routing → aynı gmail kutusu). Mağaza girişindeki adres hemen değişti; uygulama içindeki string bir sonraki sürümle çıkacak
 - [x] Web sitesi ve gizlilik politikası: `https://stforge.dev/nisteia` (2026-08-10) — kaynak `SamedTemiz/stforge-site` reposunda
+- [x] Mağaza girişi 6 dilde yayında (2026-08-10) — metinler `docs/store-listings.md`; uygulama zaten çevriliydi ama vitrin İngilizce olduğu için EL/RO/RU/SR/BG aramalarında hiç görünmüyorduk
+- [x] Uygulama içi puan isteği: Play In-App Review API (2026-08-10) — kod hazır, **bir sonraki sürümle** çıkar. Sıralama puana bakıyor, puanımız yoktu
 
 ## Faz 3 — Büyük Perhiz hazırlığı (Aralık 2026 – Şubat 2027)
 

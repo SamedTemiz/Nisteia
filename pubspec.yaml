@@ -1,7 +1,7 @@
 name: nisteia
 description: "Orthodox fasting assistant — 'what can I eat today?' Fasting-first, local-first, no server."
 publish_to: "none"
-version: 0.1.1+3
+version: 1.0.0+4
 
 environment:
   sdk: ">=3.3.0 <4.0.0"
@@ -37,6 +37,12 @@ dependencies:
 
   # Opens the rule-error report mailto: link from Settings.
   url_launcher: ^6.3.1
+
+  # Play's native in-app rating sheet. Deliberately NOT fronted by a "do you
+  # like the app?" dialog — gating the review flow behind a satisfaction check
+  # violates Google's policy. When and whether to ask lives in
+  # lib/features/review/review_prompt.dart.
+  in_app_review: ^2.0.12
 
   # One-time Pro purchase, direct Google Play Billing (no RevenueCat — karar
   # günlüğü 2026-07-12: tek ürün + tek platform + backend-yok).

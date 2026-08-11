@@ -7,6 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'app/home_shell.dart';
 import 'app/notification_service.dart';
+import 'app/review_service.dart';
 import 'app/settings.dart';
 import 'features/notifications/notification_plan.dart';
 import 'features/onboarding/onboarding_screen.dart';
@@ -62,7 +63,8 @@ class NisteiaApp extends ConsumerWidget {
 
 /// Shows onboarding until it is complete, then the main navigation shell.
 /// Also keeps scheduled notifications in sync with the user's prefs: once on
-/// first build, then again whenever a relevant setting changes.
+/// first build, then again whenever a relevant setting changes, and counts the
+/// launch towards the rating prompt.
 class _RootGate extends ConsumerStatefulWidget {
   const _RootGate();
 
@@ -70,12 +72,44 @@ class _RootGate extends ConsumerStatefulWidget {
   ConsumerState<_RootGate> createState() => _RootGateState();
 }
 
-class _RootGateState extends ConsumerState<_RootGate> {
+class _RootGateState extends ConsumerState<_RootGate>
+    with WidgetsBindingObserver {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance
-        .addPostFrameCallback((_) => _reschedule(ref.read(settingsProvider)));
+    WidgetsBinding.instance.addObserver(this);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final settings = ref.read(settingsProvider);
+      _reschedule(settings);
+      _countUse(settings);
+    });
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  /// Android can keep the process alive for days, so `initState` alone would
+  /// miss someone who returns to the app every morning without it ever being
+  /// killed — their usage would never accumulate and they'd never be asked to
+  /// rate it. Counting on resume as well is what makes "days used" mean days.
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed && mounted) {
+      _countUse(ref.read(settingsProvider));
+    }
+  }
+
+  /// Fire-and-forget: the rating sheet is the least important thing here and
+  /// must never delay a frame. The service is re-entrancy guarded, so the
+  /// several resume events a single app switch can produce are harmless.
+  void _countUse(AppSettings settings) {
+    unawaited(ReviewService.instance.recordUseAndMaybeAsk(
+      ref.read(sharedPreferencesProvider),
+      onboardingComplete: settings.onboardingComplete,
+    ));
   }
 
   void _reschedule(AppSettings settings) {
@@ -105,6 +139,9 @@ class _RootGateState extends ConsumerState<_RootGate> {
         return;
       }
       _reschedule(next);
+      // Catches the session in which onboarding is finished: the post-frame
+      // callback above already ran, back when there was nothing to count yet.
+      _countUse(next);
     });
 
     return done ? const HomeShell() : const OnboardingScreen();
