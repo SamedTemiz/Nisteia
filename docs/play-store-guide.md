@@ -175,6 +175,21 @@ New/Old calendar, 6 languages. No account, no ads, no subscription.
 - Kural hatası bildirimi gelirse: `nisteia@stforge.dev` → motoru orthocal'a karşı test et → 48 saat içinde yama.
 - Sıralama anahtar kelimeleri zaten başlık+açıklamada: *orthodox fasting, orthodox calendar, lent*.
 
+## Bilinen derleme uyarıları (engel değil)
+
+- **"Release app bundle failed to strip debug symbols from native libraries"** —
+  `flutter doctor`'da *cmdline-tools component is missing* diyor; Flutter,
+  sembolleri temizlemek için o araçlara ihtiyaç duyuyor, bulamayınca adımı
+  atlıyor ve AAB olması gerekenden büyük kalıyor. Play reddetmiyor, çökme
+  yaratmıyor — tek maliyeti indirme boyutu. Android cmdline-tools kurulunca
+  düzelir; sonraki sürümden önce yapılacak.
+- **"plugins that apply Kotlin Gradle Plugin (KGP): in_app_review"** — paket
+  eski usul KGP kullanıyor. Bugün çalışıyor (`android.builtInKotlin=false`),
+  ama Flutter'ı yükseltmeden önce paketin güncellenip güncellenmediğine bak,
+  yoksa derleme kırılır.
+
+---
+
 ## Sık yapılan hatalar (bizden kaçınılmış olanlar ✓)
 - ✓ Ürün ID kod/console uyuşmazlığı (`nisteia_pro` sabit)
 - ✓ Veri güvenliği beyanı ile gerçek davranış çelişkisi (hiç veri toplamıyoruz)
